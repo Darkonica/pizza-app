@@ -1,16 +1,18 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link';
+import ReactSVG from 'react-svg';
 
-import styles from './styles';
+import Styles from './styles';
 
 const Header = () => {
 		return (
-				<header>
+      <Styles>
+				<header className="wrapper">
           <div className="upper-part">
-            <div className={styles.logo}>
+            <div className="logo">
 							<Link href="/">
 								<a>
-									<img src="/static/images/logo.svg" />
+                  <ReactSVG src="/static/images/logo.svg" />
 								</a>
 							</Link>
 						</div>
@@ -62,6 +64,7 @@ const Header = () => {
             </div>
           </div> 
 				</header>
+      </Styles>
 		);
 };
 

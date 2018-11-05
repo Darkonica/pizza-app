@@ -1,9 +1,22 @@
-const styles = css`
-  .logo {
-    width: 200px;
-    height: 50px;
-    border: 1px solid black;
+import styled from 'styled-components';
+
+const Styles = styled.div`
+  .upper-part {
+    display: flex;
+
+    .logo {
+      width: 250px;
+    }
+
+    .delivery-info {
+      margin-left: 50px;
+    }
+    .phone {
+      margin-left: 50px;
+    }
   }
+  
+
 `;
 
-export default styles;
+export default Styles;
