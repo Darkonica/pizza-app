@@ -37,6 +37,7 @@ const Styles = styled.div`
     nav {
       ul {
         padding: 0;
+        margin: 1em 0;
 
         li {
           display: inline-block;
