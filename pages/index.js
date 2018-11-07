@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout/DefaultLayout/DefaultLayout';
-import SpyInspector from '../components/SpyInspector/SpyInspector';
+import SecretBuyer from '../components/SecretBuyer/SecretBuyer';
 
 class Index extends Component {
     render() {
         return (
             <Layout>
-                <SpyInspector />
+                <SecretBuyer />
             </Layout>
         );
     }

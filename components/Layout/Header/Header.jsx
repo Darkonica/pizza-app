@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link';
 import ReactSVG from 'react-svg';
+import Button from '../Button/Button';
 
 import Styles from './styles';
 
@@ -10,20 +11,26 @@ const Header = () => {
 				<header>
           <div className="wrapper">
             <div className="upper-part">
-              <div className="logo">
-                <Link href="/">
-                  <a>
-                    <ReactSVG src="/static/images/logo.svg" />
-                  </a>
-                </Link>
+              <div className="flex">
+                <div className="logo">
+                  <Link href="/">
+                    <a>
+                      <ReactSVG src="/static/images/logo.svg" />
+                    </a>
+                  </Link>
+                </div>
+                <div className="delivery-info">
+                  <div>Доставка пиццы <span className="orange">Санкт-Петербург</span></div>
+                  <div className="desc">Среднее время доставки 34 мин</div>
+                </div>
+                <div className="phone">
+                  <div>8 800 302-00-60</div>
+                  <div className="desc">Звонок бесплатный</div>
+                </div>
               </div>
-              <div className="delivery-info">
-                <div>Доставка пиццы <span className="orange">Санкт-Петербург</span></div>
-                <div className="desc">Среднее время доставки 34 мин</div>
-              </div>
-              <div className="phone">
-                <div>8 800 302-00-60</div>
-                <div className="desc">Звонок бесплатный</div>
+              <div className="login-cont">
+                <Button secondary small link={'/bonuses'}>Додо рубли</Button>
+                <Button secondary small link={'/login'}>Войти</Button>
               </div>
             </div>
             
@@ -61,7 +68,9 @@ const Header = () => {
               </nav>
 
               <div className="cart">
-                Cart
+                <Button link={'/cart'}>
+                  Корзина
+                </Button>
               </div>
             </div>
           </div>

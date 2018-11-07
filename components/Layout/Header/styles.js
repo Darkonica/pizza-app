@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
   header {
-    padding: 30px 0;
+    padding-top: 30px
   }
   .upper-part {
     display: flex;
+    justify-content: space-between;
 
     .logo {
       width: 250px;
@@ -27,17 +28,23 @@ const Styles = styled.div`
       color: #888;
       font-size: 14px;
     }
+
+    .login-cont {
+      button {
+        margin-left: 10px;
+      }
+    }
   }
   
   .lower-part {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 5px;
 
     nav {
       ul {
         padding: 0;
-        margin: 1em 0;
+        margin: 0;
 
         li {
           display: inline-block;
@@ -48,10 +55,16 @@ const Styles = styled.div`
           }
 
           a {
+            display: block;
             font-size: 14px;
             color: #272727;
             text-decoration: none;
-            padding: 1.5em 0;
+            padding: 1em 0;
+            transition: color 0.15s ease-out;
+
+            &:hover, &.active {
+              color: #FF6900;
+            }
           }
         }
       }
