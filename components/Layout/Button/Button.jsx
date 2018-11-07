@@ -18,7 +18,7 @@ const StyledButton = styled.button`
     &:hover {
         color: ${props => (props.white || props.secondary) ? "#FF6900" : "#FFF"};
         background: ${props => (props.white || props.secondary) ? "#FFF" : "#FF6900"};
-        border: ${props => props.secondary ? "1px solid #FF6900" : "none"};
+        border: ${props => props.white ? "1px solid #FFF" : props.secondary ? "1px solid #FF6900" : "none"};
     }
 `;
 
