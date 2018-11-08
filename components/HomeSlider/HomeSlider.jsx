@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Head from 'next/head';
 import Slider from "react-slick";
 
-// import Styled from './styles';
+import Styles from './styles';
 // import './style.css';
 
 class HomeSlider extends Component {
@@ -15,11 +15,11 @@ class HomeSlider extends Component {
         };
 
         return (
-            <div>
-                <Head>
+            <Styles>
+                {/* <Head>
                     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-                </Head>
+                </Head> */}
                 <div className="container">
                     <Slider {...settings}>
                         <div>
@@ -36,8 +36,7 @@ class HomeSlider extends Component {
                         </div>
                     </Slider>
                 </div>
-            </div>
-            
+            </Styles>
         );
     }
 }

@@ -8,6 +8,7 @@ class Index extends Component {
         return (
             <Layout>
                 <HomeSlider />
+                
                 <SecretBuyer />
             </Layout>
         );
