@@ -223,7 +223,7 @@ const Styles = styled.div`
 
 .slick-next
 {
-    right: -25px;
+    right: 25px;
 }
 [dir='rtl'] .slick-next
 {
