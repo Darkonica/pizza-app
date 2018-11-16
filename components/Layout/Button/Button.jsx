@@ -24,7 +24,6 @@ const StyledButton = styled.button`
 
 const Button = props => {
     return (
-        // <StyledButton white>{props.children}</StyledButton>
         <Link href={props.link}>
             <StyledButton {...props}>{props.children}</StyledButton>
         </Link>

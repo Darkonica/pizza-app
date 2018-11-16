@@ -13,3 +13,6 @@ body {
     display: flex;
 }
 
+input, textarea, select {
+    font-family: 'Roboto', sans-serif;
+}
