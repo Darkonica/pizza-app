@@ -23,7 +23,6 @@ const StyledButton = styled(Button)`
 `;
 
 class Promocode extends Component {
-
     state = {
         value: ''
     };
