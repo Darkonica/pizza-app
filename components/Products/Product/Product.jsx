@@ -24,6 +24,9 @@ class Product extends Component {
                 <div className="dough">
                     Традиционное
                 </div>
+                <div className="flex">
+                    <span className="price">395 <span>₽</span></span>
+                </div>
             </StyledProduct>
         );
     }
