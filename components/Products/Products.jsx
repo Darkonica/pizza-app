@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const StyledProducts = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -20px;
 `;
 
 class Products extends Component {
@@ -15,6 +16,13 @@ class Products extends Component {
                     <Product
                         
                     />
+                    <Product />
+                    <Product />
+                    <Product />
+                    <Product />
+                    <Product />
+                    <Product />
+                    
                 </StyledProducts>
             </div>
         );

@@ -1,8 +1,18 @@
 body {
     font: 16px/24px 'Roboto', sans-serif;
+    color: #373535;
     line-height: 1.4;
     margin: 0;
     padding: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+* {
+    outline: 0;
+    box-sizing: border-box;
 }
 .wrapper {
     max-width: 1280px;
@@ -13,6 +23,6 @@ body {
     display: flex;
 }
 
-input, textarea, select {
+input, textarea, select, button {
     font-family: 'Roboto', sans-serif;
 }
