@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import Button from '../../Layout/Button/Button';
 import styled from 'styled-components';
 
@@ -18,11 +18,20 @@ const StyledProduct = styled.div`
         font-size: 15px;
         color: #878686;
     }
-    .choices-cont {
+    .sizes-cont {
         display: flex;
         margin: 15px 0;
         border-radius: 8px;
         background: #f3f3f3;
+    }
+    .dough-cont {
+        display: flex;
+        margin: 15px 0;
+        border-radius: 8px;
+
+        &.bg-gray {
+            background: #f3f3f3;
+        }
     }
 
     .order-cont {
@@ -38,7 +47,7 @@ const StyledProduct = styled.div`
 `;
 
 const ChoiceButton = styled.button`
-    flex: 1 0 0;
+    width: 40%;
     display: block;
     font-size: 12px;
     color: rgba(55, 53, 53, 0.65);
@@ -47,6 +56,8 @@ const ChoiceButton = styled.button`
     background: none;
     border: 1px solid transparent;
     cursor: pointer;
+
+    ${props => props.wide ? "width: 60%;" : ""};
 
     &.active {
         color: #373535;
@@ -58,15 +69,17 @@ const ChoiceButton = styled.button`
 
 class Product extends Component {
     state = {
-        size: 'L',
+        size: 'S',
         doughType: 'standard'
     }
 
     handleSize = e => {
         e.preventDefault();
-        this.setState({
-            size: e.target.name
-        });
+        e.target.name === 'S'
+        ?
+        this.setState({ size: e.target.name, doughType: 'standard' })
+        :
+        this.setState({ size: e.target.name });
     }
 
     handleDough = e => {
@@ -87,45 +100,62 @@ class Product extends Component {
                 <div className="desc">
                     Ветчина, пикантная пепперони, томатный соус, кубики брынзы, шампиньоны, моцарелла, томаты и орегано
                 </div>
-                <div className="choices-cont">
-                    <ChoiceButton
-                        name='L'
-                        className={size === 'L' ? 'active' : null}
-                        onClick={this.handleSize}
-                    >
-                        35 см
-                    </ChoiceButton>
-                    <ChoiceButton
-                        name='M'
-                        className={size === 'M' ? 'active' : null}
-                        onClick={this.handleSize}
-                    >
-                        30 см
-                    </ChoiceButton>
-                    <ChoiceButton
-                        name='S'
-                        className={size === 'S' ? 'active' : null}
-                        onClick={this.handleSize}
-                    >
-                        25 см
-                    </ChoiceButton>
-                </div>
-                <div className="choices-cont">
-                    <ChoiceButton
-                        name='standard'
-                        className={doughType === 'standard' ? 'active' : null}
-                        onClick={this.handleDough}
-                    >
-                        Традиционное
-                    </ChoiceButton>
-                    <ChoiceButton
-                        name='thin'
-                        className={doughType === 'thin' ? 'active' : null}
-                        onClick={this.handleDough}
-                    >
-                        Тонкое
-                    </ChoiceButton>
-                </div>
+                {
+                    this.props.pizza
+                    ?
+                    <Fragment>
+                        <div className="sizes-cont">
+                            <ChoiceButton
+                                name='L'
+                                className={size === 'L' ? 'active' : null}
+                                onClick={this.handleSize}
+                            >
+                                35 см
+                            </ChoiceButton>
+                            <ChoiceButton
+                                name='M'
+                                className={size === 'M' ? 'active' : null}
+                                onClick={this.handleSize}
+                            >
+                                30 см
+                            </ChoiceButton>
+                            <ChoiceButton
+                                name='S'
+                                className={size === 'S' ? 'active' : null}
+                                onClick={this.handleSize}
+                            >
+                                25 см
+                            </ChoiceButton>
+                        </div>
+                        <div className={`dough-cont ${size !== 'S' ? 'bg-gray' : null}`} >
+                            <ChoiceButton
+                                wide
+                                name='standard'
+                                className={doughType === 'standard' ? 'active' : null}
+                                onClick={this.handleDough}
+                            >
+                                Традиционное
+                            </ChoiceButton>
+                            {/* NO THIN DOUGH FOR S SIZE! */}
+                            {
+                                size !== 'S'
+                                ?
+                                <ChoiceButton
+                                    name='thin'
+                                    className={doughType === 'thin' ? 'active' : null}
+                                    onClick={this.handleDough}
+                                >
+                                    Тонкое
+                                </ChoiceButton>
+                                :
+                                null
+                            }
+                        </div>
+                    </Fragment>
+                    :
+                    null
+                }
+                
                 <div className="order-cont">
                     <span className="price">395 <span>₽</span></span>
                     <Button secondary>В корзину</Button>
