@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Product from './Product/Product';
 import Drink from './Product/Drink';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import styled from 'styled-components';
+
+configureAnchors({offset: -80, scrollDuration: 800});
 
 const StyledProducts = styled.div`
     
@@ -18,45 +21,45 @@ class Products extends Component {
         return (
             <div className="wrapper">
                 <StyledProducts>
-                    <ProductContainer>
-                        <Product pizza />
-                        <Product pizza />
-                        <Product pizza />
-                        <Product pizza />
-                        <Product pizza />
-                        <Product pizza />
-                        <Product pizza />
-                    </ProductContainer>
+                    <ScrollableAnchor id={'pizza'}>
+                        <ProductContainer>
+                            <Product pizza />
+                            <Product pizza />
+                            <Product pizza />
+                            <Product pizza />
+                            <Product pizza />
+                            <Product pizza />
+                            <Product pizza />
+                        </ProductContainer>
+                    </ScrollableAnchor>
                     
-
                     <h2>Комбо</h2>
-                    <ProductContainer>
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                    </ProductContainer>
+                    <ScrollableAnchor id={'combo'}>
+                        <ProductContainer>
+                            <Product />
+                            <Product />
+                            <Product />
+                            <Product />
+                            <Product />
+                            <Product />
+                            <Product />
+                        </ProductContainer>
+                    </ScrollableAnchor>
 
                     <h2>Напитки</h2>
-                    <ProductContainer>
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                        <Drink />
-                    </ProductContainer>
+                    <ScrollableAnchor id={'drinks'}>
+                        <ProductContainer>
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                            <Drink />
+                        </ProductContainer>
+                    </ScrollableAnchor>
                     
                 </StyledProducts>
             </div>

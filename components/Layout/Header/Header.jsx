@@ -38,22 +38,22 @@ const Header = () => {
               <nav>
                 <ul>
                   <li>
-                    <Link href="#pizza"><a>Pizza</a></Link>
+                    <a href="#pizza">Pizza</a>
                   </li>
                   <li>
-                    <Link href="#combo"><a>Combo</a></Link>
+                    <a href="#combo">Combo</a>
                   </li>
                   <li>
-                    <Link href="#antipasta"><a>Antipasta</a></Link>
+                    <a href="#antipasta">Antipasta</a>
                   </li>
                   <li>
-                    <Link href="#desserts"><a>Desserts</a></Link>
+                    <a href="#desserts">Desserts</a>
                   </li>
                   <li>
-                    <Link href="#drinks"><a>Drinks</a></Link>
+                    <a href="#drinks">Drinks</a>
                   </li>
                   <li>
-                    <Link href="#promo"><a>Promo</a></Link>
+                    <a href="#promo">Promo</a>
                   </li>
                   <li>
                     <Link href="#contacts"><a>Contacts</a></Link>
