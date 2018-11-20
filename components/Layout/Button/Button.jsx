@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -24,9 +24,18 @@ const StyledButton = styled.button`
 
 const Button = props => {
     return (
-        <Link href={props.link}>
-            <StyledButton {...props}>{props.children}</StyledButton>
-        </Link>
+        <Fragment>
+            {
+                props.link
+                ?
+                <Link href={props.link}>
+                    <StyledButton {...props}>{props.children}</StyledButton>
+                </Link>
+                :
+                <StyledButton {...props}>{props.children}</StyledButton>
+            }
+        </Fragment>
+        
     );
 };
 

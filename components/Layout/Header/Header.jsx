@@ -38,36 +38,40 @@ const Header = () => {
               <nav>
                 <ul>
                   <li>
-                    <a href="#pizza">Pizza</a>
+                    <a href="#pizza">Пиццы</a>
                   </li>
                   <li>
-                    <a href="#combo">Combo</a>
+                    <a href="#combo">Комбо</a>
                   </li>
                   <li>
-                    <a href="#antipasta">Antipasta</a>
+                    <a href="#antipasta">Закуски</a>
                   </li>
                   <li>
-                    <a href="#desserts">Desserts</a>
+                    <a href="#desserts">Десерты</a>
                   </li>
                   <li>
-                    <a href="#drinks">Drinks</a>
+                    <a href="#drinks">Напитки</a>
                   </li>
                   <li>
-                    <a href="#promo">Promo</a>
+                    <a href="#promo">Акции</a>
                   </li>
                   <li>
-                    <Link href="#contacts"><a>Contacts</a></Link>
+                    <Link href="/contacts"><a>Контакты</a></Link>
                   </li>
                   <li>
-                    <Link href="#franchise"><a>Franchise</a></Link>
+                    <Link href="/franchise"><a>Франшиза</a></Link>
                   </li>
                   <li>
-                    <Link href="#about"><a>About us</a></Link>
+                    <Link href="/about"><a>О нас</a></Link>
                   </li>
                 </ul>
               </nav>
 
               <div className="cart">
+                <div className="info">
+                  <div className="price">0 ₽</div>
+                  <div className="items">0 товаров</div>
+                </div>
                 <Button link={'/cart'}>
                   Корзина
                 </Button>

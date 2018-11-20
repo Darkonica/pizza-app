@@ -39,7 +39,7 @@ const Styles = styled.div`
   .lower-part {
     display: flex;
     justify-content: space-between;
-    margin-top: 5px;
+    margin: 5px 0;
 
     nav {
       ul {
@@ -66,6 +66,24 @@ const Styles = styled.div`
               color: #FF6900;
             }
           }
+        }
+      }
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+
+      .info {
+        font-size: 14px;
+        margin-right: 30px;
+
+        .price {
+          font-weight: 500;
+        }
+
+        .items {
+          color: #878686;
         }
       }
     }
