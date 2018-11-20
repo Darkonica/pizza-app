@@ -16,9 +16,16 @@ const Styles = styled.div`
         }
 
         .upper-part {
-            display: flex;
-            justify-content: space-between;
-            padding: 30px 0;
+            padding: 30px 0 20px;
+
+            .line-cont {
+                display: flex;
+                justify-content: space-between;
+
+                &:first-of-type {
+                    margin-bottom: 60px;
+                }
+            }
 
             .menu-cont {
                 display: flex;
@@ -62,12 +69,49 @@ const Styles = styled.div`
                     margin-top: 10px;
                 }
             }
+
+            .data-cont {
+                display: flex;
+
+                .data-block {
+                    max-width: 320px;
+                    width: 100%;
+                    margin-right: 50px;
+
+                    .title {
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                    .text {
+                        opacity: 0.7;
+                    }
+                }
+            }
             
+            .socials-cont {
+                display: flex;
+                align-items: flex-end;
+
+                .social {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10px;
+
+                    .svg {
+                        width: 24px;
+                        height: 24px;
+                        line-height: 0;
+                        margin-top: -2px;
+                        margin-right: 3px;
+                    }
+                }
+            }
         }
         .lower-part {
             display: flex;
             justify-content: space-between;
-            padding: 30px 0;
+            align-items: center;
+            padding: 20px 0;
             border-top: 1px solid #4e4b4b;
 
             ul {
@@ -107,6 +151,33 @@ const Styles = styled.div`
                         }
                     }
                 }
+            }
+
+            .app-links {
+                display: flex;
+
+                .social {
+                    height: 40px;
+                    margin-left: 10px;
+                    opacity: 1;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+
+                    // &.google-play {
+                    //     background: url('/static/images/google-play.svg') no-repeat;
+                    //     background-size: 100% 100%;
+                    //     background-position: 100% 0%;
+                    // }
+                    // &.app-store {
+                    //     background: url('/static/images/app-store.svg') no-repeat;
+                    //     background-size: 100% 100%;
+                    //     background-position: 100% 0%;
+                    // }
+                }
+                
             }
         }
     }
