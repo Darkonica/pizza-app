@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const Styles = styled.div`
-  header {
-    padding-top: 30px
-  }
+export const HeaderStyles = styled.header`
+  padding-top: 25px;
+  padding-bottom: 5px;
+
   .upper-part {
     display: flex;
     justify-content: space-between;
@@ -35,59 +35,79 @@ const Styles = styled.div`
       }
     }
   }
-  
-  .lower-part {
+`;
+
+export const LowerPartStyles = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: #FFF;
+  z-index: 100;
+
+  .wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  nav {
+    ul {
+      padding: 0;
+      margin: 0;
+      transition: transform 0.15s ease-out;
+      transform: translateX(${props => props.scroll ? "0px" : "-52px"});
 
-    nav {
-      ul {
-        padding: 0;
-        margin: 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 16px;
 
-        li {
-          display: inline-block;
-          margin-left: 1.5em;
+        &:last-of-type {
+          margin-right: 0;
+        }
 
-          &:first-of-type {
-            margin-left: 0;
+        a {
+          display: block;
+          font-size: 14px;
+          color: #272727;
+          text-decoration: none;
+          padding: 1em 0;
+          transition: color 0.15s ease-out;
+
+          &:hover, &.active {
+            color: #FF6900;
           }
+        }
+
+        &.logo-mini {
+          margin-top: -4px;
 
           a {
-            display: block;
-            font-size: 14px;
-            color: #272727;
-            text-decoration: none;
-            padding: 1em 0;
-            transition: color 0.15s ease-out;
-
-            &:hover, &.active {
-              color: #FF6900;
-            }
+            width: 36px;
+            padding: 0;
+            line-height: 0;
           }
-        }
-      }
-    }
-
-    .cart {
-      display: flex;
-      align-items: center;
-
-      .info {
-        font-size: 14px;
-        margin-right: 30px;
-
-        .price {
-          font-weight: 500;
-        }
-
-        .items {
-          color: #878686;
         }
       }
     }
   }
-`;
 
-export default Styles;
+  .cart {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    .info {
+      font-size: 14px;
+      margin-right: 30px;
+
+      .price {
+        font-weight: 500;
+      }
+
+      .items {
+        color: #878686;
+      }
+    }
+  }
+`;
