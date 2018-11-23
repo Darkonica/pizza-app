@@ -41,7 +41,7 @@ class Product extends Component {
                 
                 <div className="order-cont">
                     <div className="price">145 <span>₽</span></div>
-                    <Button secondary>В корзину</Button>
+                    <Button secondary red>В корзину</Button>
                 </div>
             </StyledProduct>
         );

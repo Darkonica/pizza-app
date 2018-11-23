@@ -60,8 +60,8 @@ const ChoiceButton = styled.button`
     ${props => props.wide ? "width: 60%;" : ""};
 
     &.active {
-        color: #373535;
-        border: 1px solid #373535;
+        color: ${props => props.theme.textColor};
+        border: 1px solid ${props => props.theme.textColor};
         border-radius: 8px;
         background-color: #fff;
     }
@@ -158,7 +158,7 @@ class Product extends Component {
                 
                 <div className="order-cont">
                     <span className="price">395 <span>₽</span></span>
-                    <Button secondary>В корзину</Button>
+                    <Button secondary red>В корзину</Button>
                 </div>
             </StyledProduct>
         );

@@ -8,8 +8,10 @@ import 'static/styles/common.css';
 
 const theme = {
     mainColor: '#FF6900',
+    mainHoverColor: '#d96334',
     grayColor: '#878686',
-    lightgrayColor: '#e6e6e6'
+    lightgrayColor: '#e6e6e6',
+    textColor: '#373535'
 };
 
 const DefaultLayout = props => {

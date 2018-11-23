@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Styles = styled.div`
     footer {
         color: #fff;
-        background-color: #373535;
+        background-color: ${props => props.theme.textColor};
 
         a {
             color: #fff;
