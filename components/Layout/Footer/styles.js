@@ -63,7 +63,7 @@ const Styles = styled.div`
                 }
                 .desc {
                     font-size: 14px;
-                    color: #888;
+                    color: ${props => props.theme.grayColor};
                 }
                 .email {
                     margin-top: 10px;

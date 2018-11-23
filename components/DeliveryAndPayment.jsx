@@ -14,7 +14,7 @@ const Block = styled.div`
     h4 {
         font-size: 18px;
         font-weight: 400;
-        color: #FF6900;
+        color: ${props => props.theme.mainColor};
         margin-bottom: 0.5em;
     }
     p {

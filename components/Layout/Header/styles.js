@@ -17,7 +17,7 @@ export const HeaderStyles = styled.header`
       margin-left: 65px;
 
       .orange {
-        color: #FF6900;
+        color: ${props => props.theme.mainColor};
       }
     }
     .phone {
@@ -25,7 +25,7 @@ export const HeaderStyles = styled.header`
       margin-left: 65px;
     }
     .desc {
-      color: #888;
+      color: ${props => props.theme.grayColor};
       font-size: 14px;
     }
 
@@ -42,6 +42,8 @@ export const LowerPartStyles = styled.div`
   top: 0;
   background-color: #FFF;
   z-index: 100;
+  border-bottom: ${props => props.scroll ? `1px solid ${props.theme.lightgrayColor}` : "none"};
+  padding-bottom: ${props => props.scroll ? "0px" : "1px"};
 
   .wrapper {
     display: flex;
@@ -75,7 +77,7 @@ export const LowerPartStyles = styled.div`
           transition: color 0.15s ease-out;
 
           &:hover, &.active {
-            color: #FF6900;
+            color: ${props => props.theme.mainColor};
           }
         }
 
@@ -106,7 +108,7 @@ export const LowerPartStyles = styled.div`
       }
 
       .items {
-        color: #878686;
+        color: ${props => props.theme.grayColor};
       }
     }
   }

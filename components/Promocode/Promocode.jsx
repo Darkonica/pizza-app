@@ -16,10 +16,10 @@ const PromoCode = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-    color: #FF6900;
+    color: ${props => props.theme.mainColor};
     padding: 4px 10px;
     border-radius: 0 15px 15px 0;
-    border-color: #FF6900;
+    border-color: ${props => props.theme.mainColor};
 `;
 
 class Promocode extends Component {

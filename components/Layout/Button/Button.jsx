@@ -11,14 +11,14 @@ const StyledButton = styled.button`
     border: ${props => props.white ? "1px solid #FFF" : props.secondary ? "1px solid #B2B2B2" : "none"};
     border-radius: ${props => props.small ? "6px" : "8px"};
     box-shadow: none;
-    background: ${props => (props.white || props.secondary) ? "none" : "#FF6900"};
+    background-color: ${props => (props.white || props.secondary) ? "transparent" : props.theme.mainColor };
     transition: all 0.15s ease-out;
     cursor: pointer;
 
     &:hover {
-        color: ${props => (props.white || props.secondary) ? "#FF6900" : "#FFF"};
-        background: ${props => (props.white || props.secondary) ? "#FFF" : "#FF6900"};
-        border: ${props => props.white ? "1px solid #FFF" : props.secondary ? "1px solid #FF6900" : "none"};
+        color: ${props => (props.white || props.secondary) ? props.theme.mainColor : "#FFF"};
+        background: ${props => (props.white || props.secondary) ? "#FFF" : props.theme.mainColor};
+        border: ${props => props.white ? "1px solid #FFF" : props.secondary ? `1px solid ${props.theme.mainColor}` : "none"};
     }
 `;
 

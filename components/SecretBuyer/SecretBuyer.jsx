@@ -8,7 +8,7 @@ const Block = styled.div`
     color: #FFF;
     font-weight: 500;
     padding: 5px 0;
-    background-color: #FF6900;
+    background-color: ${props => props.theme.mainColor};
 
     .wrapper {
         display: flex;
