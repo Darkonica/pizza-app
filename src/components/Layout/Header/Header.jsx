@@ -1,48 +1,49 @@
-import React, { Component, Fragment } from 'react';
-import Link from 'next/link';
-import ReactSVG from 'react-svg';
-import Button from '../Button/Button';
+import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+import Button from "../Button/Button";
+import Logo from "../../../static/images/logo.svg";
+import LogoMini from "../../../static/images/logo-mini.svg";
 
-import { HeaderStyles, LowerPartStyles } from './styles';
+import { HeaderStyles, LowerPartStyles } from "./styles";
 
 export class Header extends Component {
-
   state = {
-    scroll: 0
+    scroll: 0,
   };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  };
+    window.addEventListener("scroll", this.handleScroll);
+  }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 
   handleScroll = () => {
     const scrollTop = window.pageYOffset > 82 ? true : false;
 
     this.setState({
-      scroll: scrollTop
+      scroll: scrollTop,
     });
   };
 
   render() {
-		return (
+    return (
       <Fragment>
         <HeaderStyles>
           <div className="wrapper">
             <div className="upper-part">
               <div className="flex">
                 <div className="logo">
-                  <Link href="/">
-                    <a>
-                      <ReactSVG src="/static/images/logo.svg" />
-                    </a>
+                  <Link to="/">
+                    <Logo />
                   </Link>
                 </div>
                 <div className="delivery-info">
-                  <div>Доставка пиццы <span className="orange">Санкт-Петербург</span></div>
+                  <div>
+                    Доставка пиццы{" "}
+                    <span className="orange">Санкт-Петербург</span>
+                  </div>
                   <div className="desc">Среднее время доставки 34 мин</div>
                 </div>
                 <div className="phone">
@@ -51,21 +52,23 @@ export class Header extends Component {
                 </div>
               </div>
               <div className="login-cont">
-                <Button secondary small link={'/bonuses'}>Додо рубли</Button>
-                <Button secondary small link={'/login'}>Войти</Button>
+                <Button secondary small link={"/bonuses"}>
+                  Додо рубли
+                </Button>
+                <Button secondary small link={"/login"}>
+                  Войти
+                </Button>
               </div>
             </div>
           </div>
         </HeaderStyles>
-        <LowerPartStyles scroll={this.state.scroll} >
+        <LowerPartStyles scroll={this.state.scroll}>
           <div className="wrapper">
             <nav>
               <ul>
                 <li className="logo-mini">
-                  <Link href='/'>
-                    <a> 
-                      <ReactSVG src="/static/images/logo-mini.svg" />
-                    </a>
+                  <Link to="/">
+                    <LogoMini />
                   </Link>
                 </li>
                 <li>
@@ -87,13 +90,13 @@ export class Header extends Component {
                   <a href="#promo">Акции</a>
                 </li>
                 <li>
-                  <Link href="/contacts"><a>Контакты</a></Link>
+                  <Link to="/contacts">Контакты</Link>
                 </li>
                 <li>
-                  <Link href="/franchise"><a>Франшиза</a></Link>
+                  <Link to="/franchise">Франшиза</Link>
                 </li>
                 <li>
-                  <Link href="/about"><a>О нас</a></Link>
+                  <Link to="/about">О нас</Link>
                 </li>
               </ul>
             </nav>
@@ -103,17 +106,13 @@ export class Header extends Component {
                 <div className="price">0 ₽</div>
                 <div className="items">0 товаров</div>
               </div>
-              <Button link={'/cart'}>
-                Корзина
-              </Button>
+              <Button link={"/cart"}>Корзина</Button>
             </div>
-
           </div>
         </LowerPartStyles>
-          
       </Fragment>
     );
-  };
-};
+  }
+}
 
 export default Header;
