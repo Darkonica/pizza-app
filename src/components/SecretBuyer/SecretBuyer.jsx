@@ -35,7 +35,7 @@ class SecretBuyer extends Component {
         <div className="wrapper">
           <LeftPart>
             <SecretBuyerImg />
-            Стань тайным покупателем Додо Пиццы и получи пиццу в подарок
+            <div>Стань тайным покупателем Додо Пиццы и получи пиццу в подарок</div>
           </LeftPart>
           <Button white link={"/secret-buyer-form"}>
             Заполнить анкету
