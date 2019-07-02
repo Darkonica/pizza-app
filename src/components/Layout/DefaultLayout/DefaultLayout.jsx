@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { ThemeProvider } from "styled-components";
 
+import "../../../static/styles/fonts.css";
 import "../../../static/styles/common.css";
 
 const theme = {

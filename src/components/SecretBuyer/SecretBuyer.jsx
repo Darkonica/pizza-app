@@ -21,16 +21,10 @@ const LeftPart = styled.div`
   align-items: center;
   font-size: 18px;
 
-  .svg {
+  svg {
     width: 50px;
     margin-right: 15px;
-  }
-  svg {
-    display: inline-block;
     vertical-align: top;
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
   }
 `;
 

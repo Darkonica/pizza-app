@@ -7,6 +7,9 @@ import InstagramIcon from "../../../static/images/socials/instagram.svg";
 import VKIcon from "../../../static/images/socials/vk.svg";
 import YoutubeIcon from "../../../static/images/socials/youtube.svg";
 
+import GooglePlayIcon from "../../../static/images/google-play.svg";
+import AppstoreIcon from "../../../static/images/app-store.svg";
+
 import Styles from "./styles";
 
 const Footer = () => {
@@ -146,10 +149,10 @@ const Footer = () => {
             </div>
             <div className="app-links">
               <Link to="#" className="google-play social">
-                <img src="static/images/google-play.svg" />
+                <GooglePlayIcon />
               </Link>
               <Link to="#" className="app-store social">
-                <img src="static/images/app-store.svg" />
+                <AppstoreIcon />
               </Link>
             </div>
           </div>

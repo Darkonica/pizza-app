@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const postcssNormalize = require("postcss-normalize");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
 
 module.exports = {
   mode: "development",
@@ -58,6 +60,15 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: "src/static/images/",
+      },
+    ]),
+    new ImageminWebpackPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      disable: process.env.NODE_ENV !== "production", // Disable during development
     }),
   ],
 };
