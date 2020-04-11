@@ -3,58 +3,51 @@ import styled from 'styled-components';
 import Button from '../Layout/Button/Button';
 
 const PromoCode = styled.div`
-    text-align: center;
-    margin: 32px 0 48px;
+  text-align: center;
+  margin: 32px 0 48px;
 
-    input {
-        padding: 6px 15px;
-        border: 1px solid #aaa;
-        border-right: none;
-        border-radius: 15px 0 0 15px;
-        box-shadow: none;
-    }
+  input {
+    padding: 6px 15px;
+    border: 1px solid #aaa;
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+    box-shadow: none;
+  }
 `;
 
 const StyledButton = styled(Button)`
-    color: ${props => props.theme.mainColor};
-    padding: 4px 10px;
-    border-radius: 0 15px 15px 0;
-    border-color: ${props => props.theme.mainColor};
+  color: ${props => props.theme.mainColor};
+  padding: 4px 10px;
+  border-radius: 0 15px 15px 0;
+  border-color: ${props => props.theme.mainColor};
 `;
 
 class Promocode extends Component {
-    state = {
-        value: ''
-    };
+  state = {
+    value: '',
+  };
 
-    onChange = (e) => {
-        const value = e.target.value;
-        console.log(value);
-        this.setState({
-            ...this.state,
-            value
-        });
-    }
+  onChange = e => {
+    const value = e.target.value;
+    console.log(value);
+    this.setState({
+      ...this.state,
+      value,
+    });
+  };
 
-    onSubmit = () => {
+  onSubmit = () => {};
 
-    }
+  render() {
+    const { value } = this.state;
 
-    render() {
-        const { value } = this.state;
-
-        return (
-            <PromoCode>
-                <input
-                    type="text"
-                    placeholder="Введите промокод"
-                    value={value}
-                    onChange={this.onChange}
-                />
-                <StyledButton secondary>Применить</StyledButton>
-            </PromoCode>
-        );
-    }
+    return (
+      <PromoCode>
+        <input type="text" placeholder="Введите промокод" value={value} onChange={this.onChange} />
+        <StyledButton secondary>Применить</StyledButton>
+      </PromoCode>
+    );
+  }
 }
 
 export default Promocode;
