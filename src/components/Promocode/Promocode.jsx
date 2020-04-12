@@ -28,10 +28,9 @@ class Promocode extends Component {
   };
 
   onChange = e => {
-    const value = e.target.value;
-    console.log(value);
+    const { value } = e.target;
+
     this.setState({
-      ...this.state,
       value,
     });
   };

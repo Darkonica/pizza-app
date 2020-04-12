@@ -40,10 +40,10 @@ export const HeaderStyles = styled.header`
 export const LowerPartStyles = styled.div`
   position: sticky;
   top: 0;
-  background-color: #FFF;
+  background-color: #fff;
   z-index: 100;
-  border-bottom: ${props => props.scroll ? `1px solid ${props.theme.lightgrayColor}` : "none"};
-  padding-bottom: ${props => props.scroll ? "0px" : "1px"};
+  border-bottom: ${props => (props.scroll ? `1px solid ${props.theme.lightgrayColor}` : 'none')};
+  padding-bottom: ${props => (props.scroll ? '0px' : '1px')};
 
   .wrapper {
     display: flex;
@@ -51,13 +51,13 @@ export const LowerPartStyles = styled.div`
     align-items: center;
     overflow: hidden;
   }
-  
+
   nav {
     ul {
       padding: 0;
       margin: 0;
       transition: transform 0.15s ease-out;
-      transform: translateX(${props => props.scroll ? "0px" : "-52px"});
+      transform: translateX(${props => (props.scroll ? '0px' : '-52px')});
 
       li {
         display: inline-block;
@@ -76,7 +76,8 @@ export const LowerPartStyles = styled.div`
           padding: 1em 0;
           transition: color 0.15s ease-out;
 
-          &:hover, &.active {
+          &:hover,
+          &.active {
             color: ${props => props.theme.mainColor};
           }
         }
