@@ -6,8 +6,8 @@
   "extends": [
     "airbnb",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "prettier/react"
+    "prettier/react",
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -35,7 +35,7 @@
     "import/resolver": "webpack"
   },
   "rules": {
-    "prettier/prettier": "error",
+    // "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,
     "import/prefer-default-export": "off",
     "import/extensions": [
