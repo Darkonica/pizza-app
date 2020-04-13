@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
-import Button from "../Button/Button";
-import Logo from "../../../static/images/logo.svg";
-import LogoMini from "../../../static/images/logo-mini.svg";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
+import Logo from '../../../static/images/logo.svg';
+import LogoMini from '../../../static/images/logo-mini.svg';
 
-import { HeaderStyles, LowerPartStyles } from "./styles";
+import { HeaderStyles, LowerPartStyles } from './styles';
 
 export class Header extends Component {
   state = {
@@ -12,15 +12,15 @@ export class Header extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = () => {
-    const scrollTop = window.pageYOffset > 82 ? true : false;
+    const scrollTop = window.pageYOffset > 82;
 
     this.setState({
       scroll: scrollTop,
@@ -28,8 +28,10 @@ export class Header extends Component {
   };
 
   render() {
+    const { scroll } = this.state;
+
     return (
-      <Fragment>
+      <>
         <HeaderStyles>
           <div className="wrapper">
             <div className="upper-part">
@@ -41,8 +43,7 @@ export class Header extends Component {
                 </div>
                 <div className="delivery-info">
                   <div>
-                    Доставка пиццы{" "}
-                    <span className="orange">Санкт-Петербург</span>
+                    Доставка пиццы <span className="orange">Санкт-Петербург</span>
                   </div>
                   <div className="desc">Среднее время доставки 34 мин</div>
                 </div>
@@ -52,17 +53,17 @@ export class Header extends Component {
                 </div>
               </div>
               <div className="login-cont">
-                <Button secondary small link={"/bonuses"}>
+                <Button secondary small link="/bonuses">
                   Додо рубли
                 </Button>
-                <Button secondary small link={"/login"}>
+                <Button secondary small link="/login">
                   Войти
                 </Button>
               </div>
             </div>
           </div>
         </HeaderStyles>
-        <LowerPartStyles scroll={this.state.scroll}>
+        <LowerPartStyles scroll={scroll}>
           <div className="wrapper">
             <nav>
               <ul>
@@ -106,11 +107,11 @@ export class Header extends Component {
                 <div className="price">0 ₽</div>
                 <div className="items">0 товаров</div>
               </div>
-              <Button link={"/cart"}>Корзина</Button>
+              <Button link="/cart">Корзина</Button>
             </div>
           </div>
         </LowerPartStyles>
-      </Fragment>
+      </>
     );
   }
 }

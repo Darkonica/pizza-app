@@ -1,30 +1,30 @@
-import React, { Fragment } from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 
-import "../../../static/styles/fonts.css";
-import "../../../static/styles/common.css";
+import '../../../static/styles/fonts.css';
+import '../../../static/styles/common.css';
 
 const theme = {
-  mainColor: "#FF6900",
-  mainHoverColor: "#d96334",
-  grayColor: "#878686",
-  lightgrayColor: "#e6e6e6",
-  textColor: "#373535",
+  mainColor: '#FF6900',
+  mainHoverColor: '#d96334',
+  grayColor: '#878686',
+  lightgrayColor: '#e6e6e6',
+  textColor: '#373535',
 };
 
-const DefaultLayout = props => {
+const DefaultLayout = ({ children }) => {
   return (
-    <Fragment>
+    <>
       <ThemeProvider theme={theme}>
-        <Fragment>
+        <>
           <Header />
-          {props.children}
+          {children}
           <Footer />
-        </Fragment>
+        </>
       </ThemeProvider>
-    </Fragment>
+    </>
   );
 };
 

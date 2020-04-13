@@ -1,8 +1,8 @@
-import React, { Fragment, Component } from "react";
-import Button from "../../Layout/Button/Button";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Button from '../../Layout/Button/Button';
 
-import image from "../../../static/images/drink-mors.jpg";
+import image from '../../../static/images/drink-mors.jpg';
 
 const StyledProduct = styled.div`
   width: 16.66666666666667%;
@@ -37,7 +37,7 @@ class Product extends Component {
       <StyledProduct>
         <div className="title">Морс Черная смородина, 0,45 л</div>
         <div className="img-cont">
-          <img src={image} />
+          <img src={image} alt="" />
         </div>
 
         <div className="order-cont">

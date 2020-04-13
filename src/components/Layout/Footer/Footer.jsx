@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import LogoShort from "../../../static/images/logo-short.svg";
-import FacebookIcon from "../../../static/images/socials/facebook.svg";
-import InstagramIcon from "../../../static/images/socials/instagram.svg";
-import VKIcon from "../../../static/images/socials/vk.svg";
-import YoutubeIcon from "../../../static/images/socials/youtube.svg";
+import LogoShort from '../../../static/images/logo-short.svg';
+import FacebookIcon from '../../../static/images/socials/facebook.svg';
+import InstagramIcon from '../../../static/images/socials/instagram.svg';
+import VKIcon from '../../../static/images/socials/vk.svg';
+import YoutubeIcon from '../../../static/images/socials/youtube.svg';
 
-import GooglePlayIcon from "../../../static/images/google-play.svg";
-import AppstoreIcon from "../../../static/images/app-store.svg";
+import GooglePlayIcon from '../../../static/images/google-play.svg';
+import AppstoreIcon from '../../../static/images/app-store.svg';
 
-import Styles from "./styles";
+import Styles from './styles';
 
 const Footer = () => {
   return (
@@ -85,9 +85,7 @@ const Footer = () => {
                 <div className="phone">8 800 302-00-60</div>
                 <div className="desc">Звонок бесплатный</div>
                 <div className="email">
-                  <Link to="mailto:feedback@dodopizza.com">
-                    feedback@dodopizza.com
-                  </Link>
+                  <Link to="mailto:feedback@dodopizza.com">feedback@dodopizza.com</Link>
                 </div>
               </div>
             </div>
@@ -96,16 +94,11 @@ const Footer = () => {
               <div className="data-cont">
                 <div className="data-block">
                   <div className="title">762 078 155 ₽</div>
-                  <div className="text">
-                    Выручка российской сети в этом месяце. В прошлом — 1 169 357
-                    571 ₽
-                  </div>
+                  <div className="text">Выручка российской сети в этом месяце. В прошлом — 1 169 357 571 ₽</div>
                 </div>
                 <div className="data-block">
                   <div className="title">407 пиццерий</div>
-                  <div className="text">
-                    в 11 странах, включая Китай, США и Великобританию
-                  </div>
+                  <div className="text">в 11 странах, включая Китай, США и Великобританию</div>
                 </div>
               </div>
 

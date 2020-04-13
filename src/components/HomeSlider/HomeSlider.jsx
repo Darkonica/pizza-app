@@ -19,16 +19,16 @@ function HomeSlider() {
       <div className="container">
         <Slider {...settings}>
           <div>
-            <img src={slide1} />
+            <img src={slide1} alt="" />
           </div>
           <div>
-            <img src={slide2} />
+            <img src={slide2} alt="" />
           </div>
           <div>
-            <img src={slide1} />
+            <img src={slide1} alt="" />
           </div>
           <div>
-            <img src={slide2} />
+            <img src={slide2} alt="" />
           </div>
         </Slider>
       </div>

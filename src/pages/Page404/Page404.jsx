@@ -1,13 +1,13 @@
 import React from 'react';
-import Layout from '../../Layout/DefaultLayout/DefaultLayout';
+import { DefaultLayout } from 'components/Layout/DefaultLayout';
 
 function Page404() {
   return (
-    <Layout>
+    <DefaultLayout>
       <div className="content-wrapper">
         <h1>404</h1>
       </div>
-    </Layout>
+    </DefaultLayout>
   );
 }
 

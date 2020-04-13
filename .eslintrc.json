@@ -3,7 +3,12 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["airbnb", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -16,9 +21,17 @@
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": [
+    "react",
+    "prettier"
+  ],
   "settings": {
-    "import/extensions": ["*", ".js", ".jsx", ".scss"],
+    "import/extensions": [
+      "*",
+      ".js",
+      ".jsx",
+      ".scss"
+    ],
     "import/resolver": "webpack"
   },
   "rules": {
@@ -38,7 +51,13 @@
     "radix": "off",
     "semi": "error",
     "no-console": "warn",
-    "arrow-parens": ["warn", "as-needed"],
-    "react/state-in-constructor": 0
+    "arrow-parens": [
+      "warn",
+      "as-needed"
+    ],
+    "react/state-in-constructor": 0,
+    "no-unused-expressions": 0,
+    "react/jsx-props-no-spreading": 0,
+    "jsx-a11y/anchor-is-valid": 0
   }
 }

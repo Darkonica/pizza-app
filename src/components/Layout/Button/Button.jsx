@@ -1,16 +1,16 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 
 const StyledButton = styled.button`
   font: inherit;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  padding: ${props => (props.small ? "5px 15px;" : "10px 15px;")};
+  padding: ${props => (props.small ? '5px 15px;' : '10px 15px;')};
   background-color: ${props => props.theme.mainColor};
   border: none;
-  border-radius: ${props => (props.small ? "6px" : "8px")};
+  border-radius: ${props => (props.small ? '6px' : '8px')};
   box-shadow: none;
   transition: all 0.15s ease-out;
   cursor: pointer;
@@ -34,7 +34,7 @@ const StyledButton = styled.button`
           }
         `
       : props.secondary
-      ? css`
+        ? css`
           color: #272727;
           font-weight: 400;
           background-color: transparent;
@@ -46,9 +46,9 @@ const StyledButton = styled.button`
             border: 1px solid ${props => props.theme.mainColor};
           }
         `
-      : null}
+        : null}
 
-    ${props =>
+  ${props =>
     props.white &&
     css`
       background-color: transparent;
@@ -63,16 +63,18 @@ const StyledButton = styled.button`
 `;
 
 const Button = props => {
+  const { link, children } = props;
+
   return (
-    <Fragment>
-      {props.link ? (
-        <Link to={props.link}>
-          <StyledButton {...props}>{props.children}</StyledButton>
+    <>
+      {link ? (
+        <Link to={link}>
+          <StyledButton {...props}>{children}</StyledButton>
         </Link>
       ) : (
-        <StyledButton {...props}>{props.children}</StyledButton>
-      )}
-    </Fragment>
+          <StyledButton {...props}>{children}</StyledButton>
+        )}
+    </>
   );
 };
 
