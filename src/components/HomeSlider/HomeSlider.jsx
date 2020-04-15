@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import slide1 from '../../static/images/slider/slide1.jpg';
-import slide2 from '../../static/images/slider/slide2.jpg';
+import slide1 from 'static/images/slider/slide1.jpg';
+import slide2 from 'static/images/slider/slide2.jpg';
 
 import Styles from './styles';
 

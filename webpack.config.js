@@ -51,6 +51,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       pages: path.resolve(__dirname, 'src/pages/'),
       static: path.resolve(__dirname, 'src/static/'),
+      styles: path.resolve(__dirname, 'src/styles/'),
     },
     extensions: ['.js', '.jsx', '.scss'],
   },

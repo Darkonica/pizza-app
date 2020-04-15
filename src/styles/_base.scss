@@ -1,0 +1,20 @@
+// Colors
+$main-color: '#FF6900';
+$main-hover-color: '#d96334';
+$gray-color: '#878686';
+$lightgray-color: '#e6e6e6';
+$text-color: '#373535';
+
+.content-wrapper {
+  padding-bottom: 80px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
