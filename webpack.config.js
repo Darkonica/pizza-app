@@ -26,17 +26,18 @@ module.exports = {
         use: ['@svgr/webpack'],
       },
       {
-        test: /\.(s?)css$/,
+        test: /\.s?css$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
+          'style-loader',
           {
             loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              },
+            },
           },
-          {
-            loader: 'sass-loader',
-          },
+          'sass-loader',
         ],
       },
       {
@@ -51,7 +52,7 @@ module.exports = {
       pages: path.resolve(__dirname, 'src/pages/'),
       static: path.resolve(__dirname, 'src/static/'),
     },
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
   },
   optimization: {
     minimizer: [new UglifyJsPlugin()],

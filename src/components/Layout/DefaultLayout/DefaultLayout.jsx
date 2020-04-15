@@ -3,8 +3,8 @@ import { ThemeProvider } from 'styled-components';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
-import '../../../static/styles/fonts.css';
-import '../../../static/styles/common.css';
+import 'static/styles/fonts.css';
+import 'static/styles/common.css';
 
 const theme = {
   mainColor: '#FF6900',
@@ -16,15 +16,13 @@ const theme = {
 
 const DefaultLayout = ({ children }) => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <>
-          <Header />
-          {children}
-          <Footer />
-        </>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Header />
+        {children}
+        <Footer />
+      </>
+    </ThemeProvider>
   );
 };
 

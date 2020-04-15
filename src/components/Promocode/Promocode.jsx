@@ -1,52 +1,31 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Button from '../Layout/Button/Button';
+import React, { useState } from 'react';
+import Button from 'components/Layout/Button/Button';
+import styles from './styles';
 
-const PromoCode = styled.div`
-  text-align: center;
-  margin: 32px 0 48px;
+// const StyledButton = styled(Button)`
+//   color: ${props => props.theme.mainColor};
+//   padding: 4px 10px;
+//   border-radius: 0 15px 15px 0;
+//   border-color: ${props => props.theme.mainColor};
+// `;
 
-  input {
-    padding: 6px 15px;
-    border: 1px solid #aaa;
-    border-right: none;
-    border-radius: 15px 0 0 15px;
-    box-shadow: none;
-  }
-`;
+function Promocode() {
+  const [value, setValue] = useState('');
 
-const StyledButton = styled(Button)`
-  color: ${props => props.theme.mainColor};
-  padding: 4px 10px;
-  border-radius: 0 15px 15px 0;
-  border-color: ${props => props.theme.mainColor};
-`;
-
-class Promocode extends Component {
-  state = {
-    value: '',
+  const onChange = e => {
+    setValue(e.target.value);
   };
 
-  onChange = e => {
-    const { value } = e.target;
-
-    this.setState({
-      value,
-    });
+  const onSubmit = () => {
   };
 
-  onSubmit = () => {};
-
-  render() {
-    const { value } = this.state;
-
-    return (
-      <PromoCode>
-        <input type="text" placeholder="Введите промокод" value={value} onChange={this.onChange} />
-        <StyledButton secondary>Применить</StyledButton>
-      </PromoCode>
-    );
-  }
+  return (
+    <div className={styles.container}>
+      <input type="text" placeholder="Введите промокод" value={value} onChange={onChange} />
+      {/* .button */}
+      <Button onClick={onSubmit} secondary>Применить</Button>
+    </div>
+  );
 }
 
 export default Promocode;

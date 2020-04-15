@@ -1,0 +1,21 @@
+.block {
+  color: #fff;
+  font-weight: 500;
+  padding: 5px 0;
+  background-color: red; // main color
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  
+  svg {
+    width: 50px;
+    margin-right: 15px;
+    vertical-align: top;
+  }
+}

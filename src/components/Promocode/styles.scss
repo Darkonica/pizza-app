@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+  margin: 32px 0 48px;
+
+  input {
+    padding: 6px 15px;
+    border: 1px solid #aaa;
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+    box-shadow: none;
+  }
+}
+
+.button {
+  color: red; // mainColor
+  padding: 4px 10px;
+  border-radius: 0 15px 15px 0;
+  border-color: red; // mainColor
+}
