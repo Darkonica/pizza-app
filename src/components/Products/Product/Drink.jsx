@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Button from '../../Layout/Button/Button';
+import { Button } from 'components/Layout/Button';
 
-import image from '../../../static/images/drink-mors.jpg';
+import image from 'static/images/drink-mors.jpg';
 
 const StyledProduct = styled.div`
   width: 16.66666666666667%;
@@ -29,28 +29,24 @@ const StyledProduct = styled.div`
   }
 `;
 
-class Product extends Component {
-  state = {};
+function Product() {
+  return (
+    <StyledProduct>
+      <div className="title">Морс Черная смородина, 0,45 л</div>
+      <div className="img-cont">
+        <img src={image} alt="" />
+      </div>
 
-  render() {
-    return (
-      <StyledProduct>
-        <div className="title">Морс Черная смородина, 0,45 л</div>
-        <div className="img-cont">
-          <img src={image} alt="" />
+      <div className="order-cont">
+        <div className="price">
+          145 <span>₽</span>
         </div>
-
-        <div className="order-cont">
-          <div className="price">
-            145 <span>₽</span>
-          </div>
-          <Button secondary red>
-            В корзину
-          </Button>
-        </div>
-      </StyledProduct>
-    );
-  }
+        <Button secondary red>
+          В корзину
+        </Button>
+      </div>
+    </StyledProduct>
+  );
 }
 
 export default Product;

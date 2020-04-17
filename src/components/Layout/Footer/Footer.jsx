@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import LogoShort from '../../../static/images/logo-short.svg';
-import FacebookIcon from '../../../static/images/socials/facebook.svg';
-import InstagramIcon from '../../../static/images/socials/instagram.svg';
-import VKIcon from '../../../static/images/socials/vk.svg';
-import YoutubeIcon from '../../../static/images/socials/youtube.svg';
+import LogoShort from 'static/images/logo-short.svg';
+import FacebookIcon from 'static/images/socials/facebook.svg';
+import InstagramIcon from 'static/images/socials/instagram.svg';
+import VKIcon from 'static/images/socials/vk.svg';
+import YoutubeIcon from 'static/images/socials/youtube.svg';
 
-import GooglePlayIcon from '../../../static/images/google-play.svg';
-import AppstoreIcon from '../../../static/images/app-store.svg';
+import GooglePlayIcon from 'static/images/google-play.svg';
+import AppstoreIcon from 'static/images/app-store.svg';
 
 import Styles from './styles';
 
-const Footer = () => {
+function Footer() {
   return (
     <Styles>
       <footer>

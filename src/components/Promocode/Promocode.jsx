@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from 'components/Layout/Button/Button';
+import { Button } from 'components/Layout/Button';
 import styles from './styles';
 
 // const StyledButton = styled(Button)`

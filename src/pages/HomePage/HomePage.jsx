@@ -1,14 +1,14 @@
 import React from 'react';
-import Layout from 'components/Layout/DefaultLayout/DefaultLayout';
-import HomeSlider from 'components/HomeSlider/HomeSlider';
-import SecretBuyer from 'components/SecretBuyer/SecretBuyer';
+import { DefaultLayout } from 'components/Layout/DefaultLayout';
+import { HomeSlider } from 'components/HomeSlider';
+import { SecretBuyer } from 'components/SecretBuyer';
 import Products from 'components/Products/Products';
 import { DeliveryAndPayment } from 'components/DeliveryAndPayment';
-import Promocode from 'components/Promocode/Promocode';
+import { Promocode } from 'components/Promocode';
 
 function HomePage() {
   return (
-    <Layout>
+    <DefaultLayout>
       <div className="content-wrapper">
         <HomeSlider />
         <Promocode />
@@ -19,7 +19,7 @@ function HomePage() {
       </div>
 
       <SecretBuyer />
-    </Layout>
+    </DefaultLayout>
   );
 }
 

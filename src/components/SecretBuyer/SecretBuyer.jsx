@@ -1,6 +1,6 @@
 import React from 'react';
 import SecretBuyerImg from 'static/images/secret-buyer.svg';
-import Button from 'components/Layout/Button/Button';
+import { Button } from 'components/Layout/Button';
 import commonStyles from 'styles/commonStyles';
 import styles from './styles';
 

@@ -31,7 +31,9 @@ const StyledButton = styled.button`
             border: 1px solid ${props.theme.mainHoverColor};
           }
         `;
-    } if (props.secondary) {
+    }
+
+    if (props.secondary) {
       return css`
         color: #272727;
         font-weight: 400;
@@ -45,6 +47,7 @@ const StyledButton = styled.button`
         }
       `;
     }
+
     if (props.white) {
       return css`
         background-color: transparent;

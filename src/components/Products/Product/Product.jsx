@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Button from '../../Layout/Button/Button';
+import { Button } from 'components/Layout/Button';
 
-import image from '../../../static/images/pizza-dodo-sm.jpg';
+import image from 'static/images/pizza-dodo-sm.jpg';
 
 const StyledProduct = styled.div`
   width: 25%;
@@ -69,73 +69,70 @@ const ChoiceButton = styled.button`
   }
 `;
 
-class Product extends Component {
-  state = {
-    size: 'S',
-    doughType: 'standard',
-  };
+function Product({ pizza }) {
+  const [size, setSize] = useState('S');
+  const [doughType, setDoughType] = useState('standard');
 
-  handleSize = e => {
+  const handleSize = e => {
     e.preventDefault();
-    e.target.name === 'S' ? this.setState({ size: e.target.name, doughType: 'standard' }) : this.setState({ size: e.target.name });
+
+    if (e.target.name === 'S') {
+      setDoughType('standard');
+    }
+
+    setSize(e.target.name);
   };
 
-  handleDough = e => {
+  const handleDough = e => {
     e.preventDefault();
-    this.setState({
-      doughType: e.target.name,
-    });
+    setDoughType(e.target.name);
   };
 
-  render() {
-    const { pizza } = this.props;
-    const { size, doughType } = this.state;
+  return (
+    <StyledProduct>
+      <div className="img-cont">
+        <img src={image} alt="" />
+      </div>
+      <div className="title">Четыре сезона</div>
+      <div className="desc">Ветчина, пикантная пепперони, томатный соус, кубики брынзы, шампиньоны, моцарелла, томаты и орегано</div>
 
-    return (
-      <StyledProduct>
-        <div className="img-cont">
-          <img src={image} alt="" />
-        </div>
-        <div className="title">Четыре сезона</div>
-        <div className="desc">Ветчина, пикантная пепперони, томатный соус, кубики брынзы, шампиньоны, моцарелла, томаты и орегано</div>
-        {pizza ? (
-          <>
-            <div className="sizes-cont">
-              <ChoiceButton name="L" className={size === 'L' ? 'active' : null} onClick={this.handleSize}>
-                35 см
+      {pizza && (
+        <>
+          <div className="sizes-cont">
+            <ChoiceButton name="L" className={size === 'L' ? 'active' : null} onClick={handleSize}>
+              35 см
               </ChoiceButton>
-              <ChoiceButton name="M" className={size === 'M' ? 'active' : null} onClick={this.handleSize}>
-                30 см
+            <ChoiceButton name="M" className={size === 'M' ? 'active' : null} onClick={handleSize}>
+              30 см
               </ChoiceButton>
-              <ChoiceButton name="S" className={size === 'S' ? 'active' : null} onClick={this.handleSize}>
-                25 см
+            <ChoiceButton name="S" className={size === 'S' ? 'active' : null} onClick={handleSize}>
+              25 см
               </ChoiceButton>
-            </div>
-            <div className={`dough-cont ${size !== 'S' ? 'bg-gray' : null}`}>
-              <ChoiceButton wide name="standard" className={doughType === 'standard' ? 'active' : null} onClick={this.handleDough}>
-                Традиционное
+          </div>
+          <div className={`dough-cont ${size !== 'S' ? 'bg-gray' : null}`}>
+            <ChoiceButton wide name="standard" className={doughType === 'standard' ? 'active' : null} onClick={handleDough}>
+              Традиционное
+            </ChoiceButton>
+            {/* NO THIN DOUGH FOR S SIZE! */}
+            {size !== 'S' && (
+              <ChoiceButton name="thin" className={doughType === 'thin' ? 'active' : null} onClick={handleDough}>
+                Тонкое
               </ChoiceButton>
-              {/* NO THIN DOUGH FOR S SIZE! */}
-              {size !== 'S' ? (
-                <ChoiceButton name="thin" className={doughType === 'thin' ? 'active' : null} onClick={this.handleDough}>
-                  Тонкое
-                </ChoiceButton>
-              ) : null}
-            </div>
-          </>
-        ) : null}
+            )}
+          </div>
+        </>
+      )}
 
-        <div className="order-cont">
-          <span className="price">
-            395 <span>₽</span>
-          </span>
-          <Button secondary red>
-            В корзину
+      <div className="order-cont">
+        <span className="price">
+          395 <span>₽</span>
+        </span>
+        <Button secondary red>
+          В корзину
           </Button>
-        </div>
-      </StyledProduct>
-    );
-  }
+      </div>
+    </StyledProduct>
+  );
 }
 
 export default Product;
