@@ -4,10 +4,11 @@ import { Button } from 'components/Layout/Button';
 import Logo from 'static/images/logo.svg';
 import LogoMini from 'static/images/logo-mini.svg';
 
-import { HeaderStyles, LowerPartStyles } from './styles';
+import commonStyles from 'styles/commonStyles';
+import styles from './styles';
 
 function Header() {
-  const [scrollPosition, setScrollPosition] = useState(0); // scroll
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset > 82;
@@ -23,42 +24,42 @@ function Header() {
 
   return (
     <>
-      <HeaderStyles>
-        <div className="wrapper">
-          <div className="upper-part">
-            <div className="flex">
-              <div className="logo">
+      <header className={styles.header}>
+        <div className={commonStyles.wrapper}>
+          <div className={styles.upperPart}>
+            <div className={commonStyles.flex}>
+              <div className={styles.logo}>
                 <Link to="/">
                   <Logo />
                 </Link>
               </div>
-              <div className="delivery-info">
+              <div className={styles.deliveryInfo}>
                 <div>
-                  Доставка пиццы <span className="orange">Санкт-Петербург</span>
+                  Доставка пиццы <span className={styles.orange}>Санкт-Петербург</span>
                 </div>
-                <div className="desc">Среднее время доставки 34 мин</div>
+                <div className={styles.desc}>Среднее время доставки 34 мин</div>
               </div>
-              <div className="phone">
+              <div className={styles.phone}>
                 <div>8 800 302-00-60</div>
-                <div className="desc">Звонок бесплатный</div>
+                <div className={styles.desc}>Звонок бесплатный</div>
               </div>
             </div>
-            <div className="login-cont">
+            <div className={styles.loginCont}>
               <Button secondary small link="/bonuses">
                 Додо рубли
                 </Button>
               <Button secondary small link="/login">
                 Войти
-                </Button>
+              </Button>
             </div>
           </div>
         </div>
-      </HeaderStyles>
-      <LowerPartStyles scroll={scrollPosition}>
-        <div className="wrapper">
+      </header>
+      <div className={styles.lowerPart} scroll={scrollPosition}>
+        <div className={`${styles.wrapper} ${commonStyles.wrapper}`}>
           <nav>
             <ul>
-              <li className="logo-mini">
+              <li className={styles.logoMini}>
                 <Link to="/">
                   <LogoMini />
                 </Link>
@@ -93,15 +94,15 @@ function Header() {
             </ul>
           </nav>
 
-          <div className="cart">
-            <div className="info">
-              <div className="price">0 ₽</div>
-              <div className="items">0 товаров</div>
+          <div className={styles.cart}>
+            <div className={styles.info}>
+              <div className={styles.price}>0 ₽</div>
+              <div className={styles.items}>0 товаров</div>
             </div>
             <Button link="/cart">Корзина</Button>
           </div>
         </div>
-      </LowerPartStyles>
+      </div>
     </>
   );
 }

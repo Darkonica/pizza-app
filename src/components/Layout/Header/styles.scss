@@ -1,10 +1,8 @@
-import styled from 'styled-components';
-
-export const HeaderStyles = styled.header`
+.header {
   padding-top: 25px;
   padding-bottom: 5px;
 
-  .upper-part {
+  .upperPart {
     display: flex;
     justify-content: space-between;
 
@@ -12,12 +10,12 @@ export const HeaderStyles = styled.header`
       width: 250px;
     }
 
-    .delivery-info {
+    .deliveryInfo {
       font-size: 18px;
       margin-left: 65px;
 
       .orange {
-        color: ${props => props.theme.mainColor};
+        color: red; // mainColor
       }
     }
     .phone {
@@ -25,25 +23,25 @@ export const HeaderStyles = styled.header`
       margin-left: 65px;
     }
     .desc {
-      color: ${props => props.theme.grayColor};
+      color: red; // grayColor
       font-size: 14px;
     }
 
-    .login-cont {
+    .loginCont {
       button {
         margin-left: 10px;
       }
     }
   }
-`;
+}
 
-export const LowerPartStyles = styled.div`
+.lowerPart {
   position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 100;
-  border-bottom: ${props => (props.scroll ? `1px solid ${props.theme.lightgrayColor}` : 'none')};
-  padding-bottom: ${props => (props.scroll ? '0px' : '1px')};
+  // border-bottom: ${props => (props.scroll ? `1px solid ${props.theme.lightgrayColor}` : 'none')};
+  // padding-bottom: ${props => (props.scroll ? '0px' : '1px')};
 
   .wrapper {
     display: flex;
@@ -57,7 +55,7 @@ export const LowerPartStyles = styled.div`
       padding: 0;
       margin: 0;
       transition: transform 0.15s ease-out;
-      transform: translateX(${props => (props.scroll ? '0px' : '-52px')});
+      // transform: translateX(${props => (props.scroll ? '0px' : '-52px')});
 
       li {
         display: inline-block;
@@ -78,11 +76,11 @@ export const LowerPartStyles = styled.div`
 
           &:hover,
           &.active {
-            color: ${props => props.theme.mainColor};
+            color: red; // mainColor
           }
         }
 
-        &.logo-mini {
+        &.logoMini {
           margin-top: -4px;
 
           a {
@@ -109,8 +107,8 @@ export const LowerPartStyles = styled.div`
       }
 
       .items {
-        color: ${props => props.theme.grayColor};
+        color: red; // grayColor
       }
     }
   }
-`;
+}
