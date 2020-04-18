@@ -1,9 +1,10 @@
 import React from 'react';
+import commonStyles from 'styles/commonStyles';
 import styles from './styles';
 
 function DeliveryAndPayment() {
   return (
-    <div className="wrapper">
+    <div className={commonStyles.wrapper}>
       <h2>Доставка и оплата</h2>
       <div className={styles.container}>
         <div className={styles.block}>

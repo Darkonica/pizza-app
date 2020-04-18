@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
+import commonStyles from 'styles/commonStyles';
 import Product from './Product/Product';
 import Drink from './Product/Drink';
 import styles from './styles';
@@ -9,7 +10,7 @@ configureAnchors({ offset: -80, scrollDuration: 800 });
 
 function Products() {
   return (
-    <div className="wrapper">
+    <div className={commonStyles.wrapper}>
       <ScrollableAnchor id="pizza">
         <div className={styles.container}>
           <Product pizza />

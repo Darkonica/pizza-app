@@ -14,14 +14,6 @@ img {
     outline: 0;
     box-sizing: border-box;
 }
-:global(.wrapper) {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-}
-:global(.flex) {
-    display: flex;
-}
 
 input, textarea, select, button {
     font-family: 'Roboto', sans-serif;
