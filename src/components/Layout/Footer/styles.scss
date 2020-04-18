@@ -1,9 +1,6 @@
-import styled from 'styled-components';
-
-const Styles = styled.div`
-  footer {
+  .footer {
     color: #fff;
-    background-color: ${props => props.theme.textColor};
+    background-color: gray; // textColor
 
     a {
       color: #fff;
@@ -15,10 +12,10 @@ const Styles = styled.div`
       }
     }
 
-    .upper-part {
+    .upperPart {
       padding: 30px 0 20px;
 
-      .line-cont {
+      .lineCont {
         display: flex;
         justify-content: space-between;
 
@@ -27,10 +24,10 @@ const Styles = styled.div`
         }
       }
 
-      .menu-cont {
+      .menuCont {
         display: flex;
 
-        .menu-block {
+        .menuBlock {
           margin-left: 50px;
 
           &:first-of-type {
@@ -63,17 +60,17 @@ const Styles = styled.div`
         }
         .desc {
           font-size: 14px;
-          color: ${props => props.theme.grayColor};
+          color: gray; // grayColor
         }
         .email {
           margin-top: 10px;
         }
       }
 
-      .data-cont {
+      .dataCont {
         display: flex;
 
-        .data-block {
+        .dataBlock {
           max-width: 320px;
           width: 100%;
           margin-right: 50px;
@@ -88,7 +85,7 @@ const Styles = styled.div`
         }
       }
 
-      .socials-cont {
+      .socialsCont {
         display: flex;
         align-items: flex-end;
 
@@ -107,7 +104,7 @@ const Styles = styled.div`
         }
       }
     }
-    .lower-part {
+    .lowerPart {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -146,7 +143,7 @@ const Styles = styled.div`
         }
       }
 
-      .app-links {
+      .appLinks {
         display: flex;
 
         .social {
@@ -164,6 +161,3 @@ const Styles = styled.div`
       }
     }
   }
-`;
-
-export default Styles;
