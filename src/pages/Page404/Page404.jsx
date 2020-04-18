@@ -1,10 +1,11 @@
 import React from 'react';
 import { DefaultLayout } from 'components/Layout/DefaultLayout';
+import commonStyles from 'styles/commonStyles';
 
 function Page404() {
   return (
     <DefaultLayout>
-      <div className="content-wrapper">
+      <div className={commonStyles.contentWrapper}>
         <h1>404</h1>
       </div>
     </DefaultLayout>

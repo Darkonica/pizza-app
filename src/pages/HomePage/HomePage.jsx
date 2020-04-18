@@ -5,11 +5,12 @@ import { SecretBuyer } from 'components/SecretBuyer';
 import Products from 'components/Products/Products';
 import { DeliveryAndPayment } from 'components/DeliveryAndPayment';
 import { Promocode } from 'components/Promocode';
+import commonStyles from 'styles/commonStyles';
 
 function HomePage() {
   return (
     <DefaultLayout>
-      <div className="content-wrapper">
+      <div className={commonStyles.contentWrapper}>
         <HomeSlider />
         <Promocode />
 
