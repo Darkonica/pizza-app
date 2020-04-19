@@ -8,7 +8,7 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
@@ -17,9 +17,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        // use: ['ts-loader', 'babel-loader', 'eslint-loader'],
+        use: ['ts-loader', 'eslint-loader'],
       },
       {
         test: /\.svg$/,
@@ -44,8 +45,14 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         use: ['file-loader'],
       },
+      { enforce: 'pre', test: /\.js$/, exclude: /node_modules/, loader: 'source-map-loader' },
     ],
   },
+  // externals: {
+  //   // what is it?
+  //   react: 'React',
+  //   'react-dom': 'ReactDOM',
+  // },
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
@@ -53,7 +60,7 @@ module.exports = {
       static: path.resolve(__dirname, 'src/static/'),
       styles: path.resolve(__dirname, 'src/styles/'),
     },
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
   },
   optimization: {
     minimizer: [new UglifyJsPlugin()],
