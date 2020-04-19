@@ -16,14 +16,15 @@ function Promocode() {
     setValue(e.target.value);
   };
 
-  const onSubmit = () => {
-  };
+  const onSubmit = () => {};
 
   return (
     <div className={styles.container}>
       <input type="text" placeholder="Введите промокод" value={value} onChange={onChange} />
       {/* .button */}
-      <Button onClick={onSubmit} secondary>Применить</Button>
+      <Button onClick={onSubmit} secondary>
+        Применить
+      </Button>
     </div>
   );
 }

@@ -105,20 +105,20 @@ function Footer() {
             <div className={styles.socialsCont}>
               <Link to="#" className={styles.social}>
                 <FacebookIcon className={styles.svg} />
-                  Facebook
-                </Link>
+                Facebook
+              </Link>
               <Link to="#" className={styles.social}>
                 <InstagramIcon className={styles.svg} />
-                  Instagram
-                </Link>
+                Instagram
+              </Link>
               <Link to="#" className={styles.social}>
                 <VKIcon className={styles.svg} />
-                  ВКонтакте
-                </Link>
+                ВКонтакте
+              </Link>
               <Link to="#" className={styles.social}>
                 <YoutubeIcon className={styles.svg} />
-                  Youtube
-                </Link>
+                Youtube
+              </Link>
             </div>
           </div>
         </div>
@@ -152,6 +152,6 @@ function Footer() {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

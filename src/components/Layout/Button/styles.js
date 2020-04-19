@@ -20,30 +20,30 @@ const StyledButton = styled.button`
   ${props => {
     if (props.secondary && props.red) {
       return css`
-          color: ${props.theme.mainColor};
-          font-weight: 400;
-          background-color: transparent;
-          border: 1px solid ${props.theme.mainColor};
+        background-color: transparent;
+        border: 1px solid ${props.theme.mainColor};
+        color: ${props.theme.mainColor};
+        font-weight: 400;
 
-          &:hover {
-            color: ${props.theme.mainHoverColor};
-            background-color: #fff;
-            border: 1px solid ${props.theme.mainHoverColor};
-          }
-        `;
+        &:hover {
+          background-color: #fff;
+          border: 1px solid ${props.theme.mainHoverColor};
+          color: ${props.theme.mainHoverColor};
+        }
+      `;
     }
 
     if (props.secondary) {
       return css`
-        color: #272727;
-        font-weight: 400;
         background-color: transparent;
         border: 1px solid #b2b2b2;
+        color: #272727;
+        font-weight: 400;
 
         &:hover {
-          color: ${props.theme.mainColor};
           background-color: #fff;
           border: 1px solid ${props.theme.mainColor};
+          color: ${props.theme.mainColor};
         }
       `;
     }
@@ -52,17 +52,17 @@ const StyledButton = styled.button`
       return css`
         background-color: transparent;
         border: 1px solid #fff;
-        
+
         &:hover {
-          color: ${props.theme.mainColor};
           background-color: #fff;
           border: 1px solid ${props.theme.mainColor};
+          color: ${props.theme.mainColor};
         }
       `;
     }
 
     return null;
-  }
-  }`;
+  }}
+`;
 
 export default StyledButton;

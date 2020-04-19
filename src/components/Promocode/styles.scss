@@ -1,21 +1,21 @@
-@import '~styles/colors.scss';
+@import '~styles/colors';
 
 .container {
-  text-align: center;
   margin: 32px 0 48px;
+  text-align: center;
 
   input {
-    padding: 6px 15px;
     border: 1px solid #aaa;
-    border-right: none;
     border-radius: 15px 0 0 15px;
+    border-right: none;
     box-shadow: none;
+    padding: 6px 15px;
   }
 }
 
 .button {
+  border-color: $mainColor;
+  border-radius: 0 15px 15px 0;
   color: $mainColor;
   padding: 4px 10px;
-  border-radius: 0 15px 15px 0;
-  border-color: $mainColor;
 }

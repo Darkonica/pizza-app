@@ -5,9 +5,9 @@ import { Button } from 'components/Layout/Button';
 import image from 'static/images/pizza-dodo-sm.jpg';
 
 const StyledProduct = styled.div`
-  width: 25%;
-  padding: 0 20px;
   margin-bottom: 60px;
+  padding: 0 20px;
+  width: 25%;
 
   .img-cont img {
     margin: 0 auto;
@@ -17,19 +17,19 @@ const StyledProduct = styled.div`
     margin: 10px 0;
   }
   .desc {
-    font-size: 15px;
     color: #878686;
+    font-size: 15px;
   }
   .sizes-cont {
+    background: #f3f3f3;
+    border-radius: 8px;
     display: flex;
     margin: 15px 0;
-    border-radius: 8px;
-    background: #f3f3f3;
   }
   .dough-cont {
+    border-radius: 8px;
     display: flex;
     margin: 15px 0;
-    border-radius: 8px;
 
     &.bg-gray {
       background: #f3f3f3;
@@ -37,9 +37,9 @@ const StyledProduct = styled.div`
   }
 
   .order-cont {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-top: 20px;
 
     .price {
@@ -62,10 +62,10 @@ const ChoiceButton = styled.button`
   ${props => (props.wide ? 'width: 60%;' : '')};
 
   &.active {
-    color: ${props => props.theme.textColor};
+    background-color: #fff;
     border: 1px solid ${props => props.theme.textColor};
     border-radius: 8px;
-    background-color: #fff;
+    color: ${props => props.theme.textColor};
   }
 `;
 
@@ -101,13 +101,13 @@ function Product({ pizza }) {
           <div className="sizes-cont">
             <ChoiceButton name="L" className={size === 'L' ? 'active' : null} onClick={handleSize}>
               35 см
-              </ChoiceButton>
+            </ChoiceButton>
             <ChoiceButton name="M" className={size === 'M' ? 'active' : null} onClick={handleSize}>
               30 см
-              </ChoiceButton>
+            </ChoiceButton>
             <ChoiceButton name="S" className={size === 'S' ? 'active' : null} onClick={handleSize}>
               25 см
-              </ChoiceButton>
+            </ChoiceButton>
           </div>
           <div className={`dough-cont ${size !== 'S' ? 'bg-gray' : null}`}>
             <ChoiceButton wide name="standard" className={doughType === 'standard' ? 'active' : null} onClick={handleDough}>
@@ -129,7 +129,7 @@ function Product({ pizza }) {
         </span>
         <Button secondary red>
           В корзину
-          </Button>
+        </Button>
       </div>
     </StyledProduct>
   );

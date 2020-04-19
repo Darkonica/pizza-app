@@ -12,8 +12,8 @@ const Button = props => {
           <StyledButton {...props}>{children}</StyledButton>
         </Link>
       ) : (
-          <StyledButton {...props}>{children}</StyledButton>
-        )}
+        <StyledButton {...props}>{children}</StyledButton>
+      )}
     </>
   );
 };

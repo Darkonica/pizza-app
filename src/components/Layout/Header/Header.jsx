@@ -47,7 +47,7 @@ function Header() {
             <div className={styles.loginCont}>
               <Button secondary small link="/bonuses">
                 Додо рубли
-                </Button>
+              </Button>
               <Button secondary small link="/login">
                 Войти
               </Button>

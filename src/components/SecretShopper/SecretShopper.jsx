@@ -1,18 +1,18 @@
 import React from 'react';
-import SecretBuyerImg from 'static/images/secret-buyer.svg';
+import SecretShopperImg from 'static/images/secret-shopper.svg';
 import { Button } from 'components/Layout/Button';
 import commonStyles from 'styles/commonStyles';
 import styles from './styles';
 
-function SecretBuyer() {
+function SecretShopper() {
   return (
     <div className={styles.block}>
-      <div className={commonStyles.wrapper}>
+      <div className={`${commonStyles.wrapper} ${styles.wrapper}`}>
         <div className={styles.text}>
-          <SecretBuyerImg />
+          <SecretShopperImg />
           <div>Стань тайным покупателем Додо Пиццы и получи пиццу в подарок</div>
         </div>
-        <Button white link="/secret-buyer-form">
+        <Button white link="/secret-shopper-form">
           Заполнить анкету
         </Button>
       </div>
@@ -20,4 +20,4 @@ function SecretBuyer() {
   );
 }
 
-export default SecretBuyer;
+export default SecretShopper;

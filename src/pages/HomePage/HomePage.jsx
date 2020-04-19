@@ -1,7 +1,7 @@
 import React from 'react';
 import { DefaultLayout } from 'components/Layout/DefaultLayout';
 import { HomeSlider } from 'components/HomeSlider';
-import { SecretBuyer } from 'components/SecretBuyer';
+import { SecretShopper } from 'components/SecretShopper';
 import Products from 'components/Products/Products';
 import { DeliveryAndPayment } from 'components/DeliveryAndPayment';
 import { Promocode } from 'components/Promocode';
@@ -19,7 +19,7 @@ function HomePage() {
         <DeliveryAndPayment />
       </div>
 
-      <SecretBuyer />
+      <SecretShopper />
     </DefaultLayout>
   );
 }
