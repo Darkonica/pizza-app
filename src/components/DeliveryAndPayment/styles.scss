@@ -1,4 +1,4 @@
-@import '~styles/colors.scss';
+@import '~styles/colors';
 
 .container {
   display: flex;
@@ -7,17 +7,17 @@
 }
 
 .block {
-  width: 25%;
   padding: 0 20px;
+  width: 25%;
 
   h4 {
+    color: $mainColor;
     font-size: 18px;
     font-weight: 400;
-    color: $mainColor;
     margin-bottom: 0.5em;
   }
-  
+
   p {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
   }
 }

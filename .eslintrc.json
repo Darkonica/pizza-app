@@ -3,12 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "prettier/react",
-    "prettier"
-  ],
+  "extends": ["airbnb", "plugin:react/recommended", "prettier/react", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -21,23 +16,15 @@
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "prettier"
-  ],
+  "plugins": ["react", "prettier"],
   "settings": {
-    "import/extensions": [
-      "*",
-      ".js",
-      ".jsx",
-      ".scss"
-    ],
+    "import/extensions": ["*", ".js", ".jsx", ".scss"],
     "import/resolver": "webpack"
   },
   "rules": {
-    // "prettier/prettier": "error",
+    "prettier/prettier": 2,
     "react/jsx-filename-extension": 0,
-    "import/prefer-default-export": "off",
+    "import/prefer-default-export": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -47,14 +34,11 @@
         "scss": "never"
       }
     ],
-    "react/prop-types": "off",
-    "radix": "off",
-    "semi": "error",
-    "no-console": "warn",
-    "arrow-parens": [
-      "warn",
-      "as-needed"
-    ],
+    "react/prop-types": 0,
+    "radix": 0,
+    "semi": 2,
+    "no-console": 1,
+    "arrow-parens": ["warn", "as-needed"],
     "react/state-in-constructor": 0,
     "no-unused-expressions": 0,
     "react/jsx-props-no-spreading": 0,
