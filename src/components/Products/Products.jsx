@@ -7,7 +7,6 @@ import styles from './styles';
 
 configureAnchors({ offset: -80, scrollDuration: 800 });
 
-
 function Products() {
   return (
     <div className={commonStyles.wrapper}>

@@ -1,3 +1,5 @@
+@import '~styles/colors.scss';
+
 .container {
   text-align: center;
   margin: 32px 0 48px;
@@ -12,8 +14,8 @@
 }
 
 .button {
-  color: red; // mainColor
+  color: $mainColor;
   padding: 4px 10px;
   border-radius: 0 15px 15px 0;
-  border-color: red; // mainColor
+  border-color: $mainColor;
 }

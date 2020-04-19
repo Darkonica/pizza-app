@@ -1,8 +1,10 @@
+@import '~styles/colors.scss';
+
 .block {
   color: #fff;
   font-weight: 500;
   padding: 5px 0;
-  background-color: red; // main color
+  background-color: $mainColor;
   display: flex;
   justify-content: space-between;
   align-items: center;

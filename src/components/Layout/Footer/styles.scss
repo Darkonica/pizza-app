@@ -1,6 +1,8 @@
+@import '~styles/colors.scss';
+
   .footer {
     color: #fff;
-    background-color: gray; // textColor
+    background-color: $textColor;
 
     a {
       color: #fff;
@@ -60,7 +62,7 @@
         }
         .desc {
           font-size: 14px;
-          color: gray; // grayColor
+          color: $grayColor;
         }
         .email {
           margin-top: 10px;
