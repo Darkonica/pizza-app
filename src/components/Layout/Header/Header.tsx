@@ -4,8 +4,8 @@ import { Button } from 'components/Layout/Button';
 import Logo from 'static/images/logo.svg';
 import LogoMini from 'static/images/logo-mini.svg';
 
-import commonStyles from 'styles/commonStyles';
-import styles from './styles';
+import commonStyles from 'styles/commonStyles.scss';
+import styles from './styles.scss';
 
 function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);

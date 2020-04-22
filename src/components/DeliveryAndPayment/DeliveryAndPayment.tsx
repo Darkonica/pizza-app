@@ -1,6 +1,6 @@
 import React from 'react';
-import commonStyles from 'styles/commonStyles';
-import styles from './styles';
+import commonStyles from 'styles/commonStyles.scss';
+import styles from './styles.scss';
 
 function DeliveryAndPayment() {
   return (

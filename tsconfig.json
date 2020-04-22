@@ -7,7 +7,23 @@
     "jsx": "react",
     "target": "es5",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    // "paths": {
+    // "@components": ["components/*"],
+    // "@pages": ["pages/*"],
+    // "@static": ["static/*"],
+    // "styles": [
+    //   "styles/*"
+    // ]
+    // }
   },
-  "include": ["./src"]
+  "include": [
+    "src/**/*",
+    "types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

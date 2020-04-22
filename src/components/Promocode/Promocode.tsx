@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'components/Layout/Button';
-import styles from './styles';
+import styles from './styles.scss';
 
 // const StyledButton = styled(Button)`
 //   color: ${props => props.theme.mainColor};
@@ -16,7 +16,7 @@ function Promocode() {
     setValue(e.target.value);
   };
 
-  const onSubmit = () => {};
+  // const onSubmit = () => { };
 
   return (
     <div className={styles.container}>

@@ -3,19 +3,7 @@
     "browser": true,
     "es6": true
   },
-  // "extends": [
-  //   "airbnb",
-  //   "plugin:react/recommended",
-  //   "prettier/react",
-  //   "prettier"
-  // ],
-  "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/react",
-    "prettier"
-  ],
+  "extends": ["airbnb", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier/react", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -28,21 +16,11 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "plugins": ["react", "prettier"],
   "settings": {
-    "import/extensions": [
-      "*",
-      ".js",
-      ".jsx",
-      ".ts",
-      ".tsx"
-    ],
+    "import/extensions": ["*", ".js", ".jsx", ".ts", ".tsx", ".scss"],
     "import/resolver": "webpack"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "prettier"
-  ],
   "rules": {
     "prettier/prettier": 2,
     "react/jsx-filename-extension": 0,
@@ -54,17 +32,15 @@
         "js": "never",
         "jsx": "never",
         "ts": "never",
-        "tsx": "never"
+        "tsx": "never",
+        "scss": "never"
       }
     ],
     "react/prop-types": 0,
     "radix": 0,
     "semi": 2,
     "no-console": 1,
-    "arrow-parens": [
-      "warn",
-      "as-needed"
-    ],
+    "arrow-parens": ["warn", "as-needed"],
     "react/state-in-constructor": 0,
     "no-unused-expressions": 0,
     "react/jsx-props-no-spreading": 0,

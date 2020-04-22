@@ -1,12 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
-// import commonStyles from 'styles/commonStyles';
+// import commonStyles from 'styles/commonStyles.scss';
 
 import slide1 from 'static/images/slider/slide1.jpg';
 import slide2 from 'static/images/slider/slide2.jpg';
 import { SLIDER_SETTINGS } from './constants';
 
-import './styles'; // TODO: wrong
+import './styles.scss'; // TODO: wrong
 
 function HomeSlider() {
   return (

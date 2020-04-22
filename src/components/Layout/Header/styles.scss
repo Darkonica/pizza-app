@@ -1,8 +1,8 @@
 @import '~styles/colors.scss';
 
 .header {
-  padding-top: 25px;
   padding-bottom: 5px;
+  padding-top: 25px;
 
   .upperPart {
     display: flex;
@@ -17,7 +17,7 @@
       margin-left: 65px;
 
       .orange {
-        color: $mainColor;
+        color: $main-color;
       }
     }
     .phone {
@@ -38,47 +38,47 @@
 }
 
 .lowerPart {
+  background-color: #fff;
   position: sticky;
   top: 0;
-  background-color: #fff;
   z-index: 100;
   // border-bottom: ${props => (props.scroll ? `1px solid ${props.theme.lightgrayColor}` : 'none')};
   // padding-bottom: ${props => (props.scroll ? '0px' : '1px')};
 
   .wrapper {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     overflow: hidden;
   }
 
   nav {
     ul {
-      padding: 0;
       margin: 0;
+      padding: 0;
       transition: transform 0.15s ease-out;
       // transform: translateX(${props => (props.scroll ? '0px' : '-52px')});
 
       li {
         display: inline-block;
-        vertical-align: middle;
         margin-right: 16px;
+        vertical-align: middle;
 
         &:last-of-type {
           margin-right: 0;
         }
 
         a {
+          color: #272727;
           display: block;
           font-size: 14px;
-          color: #272727;
-          text-decoration: none;
           padding: 1em 0;
+          text-decoration: none;
           transition: color 0.15s ease-out;
 
           &:hover,
           &.active {
-            color: $mainColor;
+            color: $main-color;
           }
         }
 
@@ -86,9 +86,9 @@
           margin-top: -4px;
 
           a {
-            width: 36px;
-            padding: 0;
             line-height: 0;
+            padding: 0;
+            width: 36px;
           }
         }
       }
@@ -96,8 +96,8 @@
   }
 
   .cart {
-    display: flex;
     align-items: center;
+    display: flex;
     padding: 10px 0;
 
     .info {

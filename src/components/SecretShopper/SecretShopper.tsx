@@ -1,8 +1,8 @@
 import React from 'react';
 import SecretShopperImg from 'static/images/secret-shopper.svg';
 import { Button } from 'components/Layout/Button';
-import commonStyles from 'styles/commonStyles';
-import styles from './styles';
+import commonStyles from 'styles/commonStyles.scss';
+import styles from './styles.scss';
 
 function SecretShopper() {
   return (

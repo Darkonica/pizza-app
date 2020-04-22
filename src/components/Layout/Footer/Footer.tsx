@@ -10,8 +10,8 @@ import YoutubeIcon from 'static/images/socials/youtube.svg';
 import GooglePlayIcon from 'static/images/google-play.svg';
 import AppstoreIcon from 'static/images/app-store.svg';
 
-import commonStyles from 'styles/commonStyles';
-import styles from './styles';
+import commonStyles from 'styles/commonStyles.scss';
+import styles from './styles.scss';
 
 function Footer() {
   return (

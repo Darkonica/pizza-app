@@ -5,7 +5,7 @@ import { SecretShopper } from 'components/SecretShopper';
 import Products from 'components/Products/Products';
 import { DeliveryAndPayment } from 'components/DeliveryAndPayment';
 import { Promocode } from 'components/Promocode';
-import commonStyles from 'styles/commonStyles';
+import commonStyles from 'styles/commonStyles.scss';
 
 function HomePage() {
   return (

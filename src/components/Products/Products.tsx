@@ -1,9 +1,9 @@
 import React from 'react';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
-import commonStyles from 'styles/commonStyles';
+import commonStyles from 'styles/commonStyles.scss';
 import Product from './Product/Product';
 import Drink from './Product/Drink';
-import styles from './styles';
+import styles from './styles.scss';
 
 configureAnchors({ offset: -80, scrollDuration: 800 });
 

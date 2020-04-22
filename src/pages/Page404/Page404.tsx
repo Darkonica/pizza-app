@@ -1,6 +1,6 @@
 import React from 'react';
 import { DefaultLayout } from 'components/Layout/DefaultLayout';
-import commonStyles from 'styles/commonStyles';
+import commonStyles from 'styles/commonStyles.scss';
 
 function Page404() {
   return (
