@@ -60,7 +60,7 @@
     "imagemin-webpack-plugin": "2.4.2",
     "jest": "25.3.0",
     "jest-dom": "4.0.0",
-    "node-sass": "4.13.1",
+    "node-sass": "7.0.0",
     "postcss-loader": "3.0.0",
     "postcss-normalize": "8.0.1",
     "prettier": "2.0.4",
